@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.19;
 
-import {Test, console} from "forge-std/Test.sol";
+import {Test} from "forge-std/Test.sol";
 import {ZkSyncChainChecker} from "lib/foundry-devops/src/ZkSyncChainChecker.sol";
 import {FoundryZkSyncChecker} from "lib/foundry-devops/src/FoundryZkSyncChecker.sol";
 
@@ -23,11 +23,9 @@ contract ZkSyncDevOps is Test, ZkSyncChainChecker, FoundryZkSyncChecker {
     // Remove the `onlyVanillaFoundry`, then run `foundryup-zksync` and then
     // `forge test --mt testZkSyncFoundryFails --zksync`
     // and this still works!
-    /*
     // function testZkSyncFoundryFails() public onlyVanillaFoundry {
     //     bool exists = vm.keyExistsJson('{"hi": "true"}', ".hi");
     //     assert(exists);
     // }
-    */
-
+    
 }
